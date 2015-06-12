@@ -17,7 +17,7 @@ defmodule ZipperTest do
   defimpl Inspect, for: BT do
     import Inspect.Algebra
 
-    def inspect(BinTree[value: v, left: l, right: r], opts) do
+    def inspect(%BinTree{value: v, left: l, right: r}, opts) do
       concat ["(", Kernel.inspect(v, opts),
               ":", (if l, do: Kernel.inspect(l, opts), else: ""),
               ":", (if r, do: Kernel.inspect(r, opts), else: ""),
