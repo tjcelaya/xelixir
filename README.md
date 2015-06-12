@@ -1,4 +1,4 @@
-# xElixir
+# xElixir ![build status](https://travis-ci.org/tjcelaya/xelixir.svg?branch=update-to-v1)
 
 Exercism exercises in Elixir
 
