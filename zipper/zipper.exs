@@ -7,7 +7,7 @@ defmodule BinTree do
   `right` is the right subtree (nil if no subtree).
   """
   @type t :: %BinTree{ value: any, left: BinTree.t | nil, right: BinTree.t | nil }
-  defstruct value: nil, left: nil, right: nil 
+  defstruct value: nil, left: nil, right: nil
 end
 
 defmodule Zipper do

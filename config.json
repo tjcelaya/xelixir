@@ -48,6 +48,7 @@
   ],
   "ignored": [
     "docs",
+    "deps",
     "test"
   ],
   "foregone": [

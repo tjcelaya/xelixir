@@ -4,7 +4,8 @@ active_problems = "config.json" |> File.read! |> Poison.decode! |> Dict.get "pro
 
 Enum.each active_problems, fn dir ->
     File.cd! dir
-    "*test.ex*" |> Path.wildcard |> List.first |> Code.load_file
+    IO.puts "running tests for " <> dir
+    "*test.ex*" |> Path.wildcard |> List.first |> Code.require_file
     File.cd! project_root
 end
 
