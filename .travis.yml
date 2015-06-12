@@ -3,3 +3,6 @@ language: bash
 script:
   - bin/fetch-configlet
   - bin/configlet .
+  - mix deps.get
+  - mix test
+  - EXERCISM_TEST_EXAMPLES=true mix test
