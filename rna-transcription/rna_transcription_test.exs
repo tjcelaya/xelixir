@@ -6,26 +6,26 @@ end
 
 ExUnit.start
 
-defmodule DNATest do
+defmodule RNATranscriptionTest do
   use ExUnit.Case, async: true
 
   test "transcribes guanine to cytosine" do
-    assert DNA.to_rna('G') == 'C'
+    assert DNATranscriber.to_rna('G') == 'C'
   end
 
   test "transcribes cytosine to guanine" do
-    # assert DNA.to_rna('C') == 'G'
+    assert DNATranscriber.to_rna('C') == 'G'
   end
 
   test "transcribes thymidine to adenine" do
-    # assert DNA.to_rna('T') == 'A'
+    assert DNATranscriber.to_rna('T') == 'A'
   end
 
   test "transcribes adenine to uracil" do
-    # assert DNA.to_rna('A') == 'U'
+    assert DNATranscriber.to_rna('A') == 'U'
   end
 
   test "it transcribes all dna nucleotides to rna equivalents" do
-    # assert DNA.to_rna('ACGTGGTCTTAA') == 'UGCACCAGAAUU'
+    assert DNATranscriber.to_rna('ACGTGGTCTTAA') == 'UGCACCAGAAUU'
   end
 end

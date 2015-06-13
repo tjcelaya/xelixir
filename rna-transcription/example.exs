@@ -1,10 +1,10 @@
-defmodule DNA do
+defmodule DNATranscriber do
   @doc """
   Transcribes a character list representing DNA nucleotides to RNA
 
   ## Examples
 
-  iex> DNA.to_rna('ACTG')
+  iex> DNATranscriber.to_rna('ACTG')
   'UGAC'
   """
   def to_rna(dna) do
