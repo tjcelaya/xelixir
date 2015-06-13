@@ -6,27 +6,27 @@ end
 
 ExUnit.start
 
-defmodule DNATest do
+defmodule PointMutationsTest do
   use ExUnit.Case, async: true
 
   test "no difference between empty strands" do
-    assert DNA.hamming_distance('', '') == 0
+    assert DNAAnalyzer.hamming_distance('', '') == 0
   end
 
   test "no difference between identical strands" do
-    # assert DNA.hamming_distance('GGACTGA', 'GGACTGA') == 0
+    assert DNAAnalyzer.hamming_distance('GGACTGA', 'GGACTGA') == 0
   end
 
   test "small hamming distance in middle somewhere" do
-    # assert DNA.hamming_distance('GGACG', 'GGTCG') == 1
+    assert DNAAnalyzer.hamming_distance('GGACG', 'GGTCG') == 1
   end
 
   test "larger distance" do
-    # assert DNA.hamming_distance('ACCAGGG', 'ACTATGG') == 2
+    assert DNAAnalyzer.hamming_distance('ACCAGGG', 'ACTATGG') == 2
   end
 
   test "hamming distance is undefined for strands of different lengths" do
-    # assert DNA.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC') == nil
-    # assert DNA.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC') == nil
+    assert DNAAnalyzer.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC') == nil
+    assert DNAAnalyzer.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC') == nil
   end
 end

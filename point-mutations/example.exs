@@ -1,10 +1,10 @@
-defmodule DNA do
+defmodule DNAAnalyzer do
   @doc """
   Compute the hamming distance between two character lists.
 
   ## Examples
 
-  iex> DNA.hamming_distance('ACCAGGG', 'ACTATGG')
+  iex> DNAAnalyzer.hamming_distance('ACCAGGG', 'ACTATGG')
   2
   """
   def hamming_distance(strand1, strand2) when length(strand1) == length(strand2) do
